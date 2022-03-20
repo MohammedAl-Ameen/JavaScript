@@ -1,4 +1,4 @@
-const grade = 87;
+const grade = 80;
 
 switch (true) {
 	
