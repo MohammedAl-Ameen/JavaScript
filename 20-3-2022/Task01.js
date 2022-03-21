@@ -1,4 +1,4 @@
-const grade = 80;
+grade = window. prompt("Enter your grade: ");
 
 switch (true) {
 	
