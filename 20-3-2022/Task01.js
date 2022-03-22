@@ -1,23 +1,57 @@
-grade = window. prompt("Enter your grade: ");
+let grade = window. prompt("Enter your grade: ");
 
-switch (true) {
-	
-	case grade >= 90:
-		console.log("A");
+let temp = grade % 10;
+grade = grade - temp;
+
+
+switch (grade) {
+
+	case 90:
+		document.write("A");
 		break;
 
-	case grade >= 80:
-		console.log("B");
+	case 80:
+		document.write("B");
 		break;
 
-	case grade >= 70:
-		console.log("C");
+	case 70:
+		document.write("C");
 		break;
 
-	case grade >= 60:
-		console.log("D");
+	case 60:
+		document.write("D");
 		break;
+
+	case 50:
+	document.write("E");
+	break;
+
+	case 40:
+	document.write("F");
+	break;
+
+	case 30:
+		document.write("F");
+	break;
+
+
+	case 20:
+		document.write("F");
+	break;
+
+
+	case 10:
+		document.write("F");
+	break;
+
+
+	case 00:
+		document.write("F");
+	break;
+
+
+
 
 	default:
-		console.log("F");
+		document.write("wrong input");
 }
