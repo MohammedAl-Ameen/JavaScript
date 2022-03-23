@@ -111,13 +111,3 @@ Alert("hello world");
 Alert("Goodbye")
 }
  /******* End Your Code ********* */
-
-
-
-
-
-
-
-
-
-

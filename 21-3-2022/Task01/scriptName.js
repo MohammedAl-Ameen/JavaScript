@@ -298,39 +298,28 @@ Ex: oddArray(nums) => [1,3,9]
 */
 
 
-function oddArray(nums){
-    index = 0;
-    i = 0;
-    let odd = [];
-    
-    while(i < nums.length){
-        
-        if(nums[i] % 2 != 0){
-            odd[index] = nums[i]
-            index++;
-        }
-        i++;
-    }
-    return odd;
-}
+
+// 1 < 2 true 
+// x = 1 , y = 2 x > y ==> false
+// x == 1 true
+// x != fasle
 
 
 function oddArray(nums){
-    index = 0;
+    flag = ture;
    
-    let odd = [];
-    
-    for(let i = 0; i < nums.length ; i++){
-        
-        if(nums[i] % 2 != 0){
-            odd[index] = nums[i]
-            index++;
-        }
+    if(nums[2] % 2 != 0){
+       
     }
-    return odd;
+    
+    for(i = 0; i < nums.length ; i++){
+        nums[i];
+    }
+
 }
 
-var nums= [1,2,3,8,9]
+
+var nums= [1,2,3,8,9,10,11,12 ]
 console.log(oddArray(nums));
 
 

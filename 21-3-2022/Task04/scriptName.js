@@ -29,8 +29,13 @@ Ex: calculateDogAge(1);
 */
 
 function calculateDogAge(number){
-    return number * 7;
+    age = 7 * number;
+    text = "";
+    text = "Your doggie is " +  age +" years old in dog years!";
+    return text;
 }
+
+console.log(calculateDogAge(5));
 
 /*
 3
@@ -49,21 +54,23 @@ function calculateSupply(age , amount){
     return text;
 }
 
-console.log(calculateSupply(100 , 3));
+console.log(calculateSupply(30 , 3));
 
 /*
 4
 Write a function called greet that:
 takes 1 argument: name.
-and it will return hello + name
+and it will return hello +' name
 
 Ex: greet("Adam")
 => "Hello Adam"
 */
 function greet(string){
-    text = 'Hello ' + string;
+    text = "Hello " + string;
     return text;
 }
+
+console.log(greet("Adam"));
 
 /*
 5
