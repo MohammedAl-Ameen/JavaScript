@@ -8,26 +8,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <select id="font">
+    <select id="font" onchange="font()">
         <option value="arial">Arial</option>
         <option value="calibri">Calibri</option>
         <option value="corbel">Corbel</option>
     </select>
 
-    <select id="size">
+    <select id="size" onchange="font_size()">
         <option value="10px">10px</option>
         <option value="12px">12px</option>
         <option value="30px">30px</option>
     </select>
 
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label>
 
-    
+  <input type="checkbox" onclick="checkbox(1)" id="Italic" name="Italic" value="Italic">
+  <label for="Italic">Italic</label>
+  <input type="checkbox" onclick="checkbox(2)" id="Bold" name="Bold" value="Bold">
+  <label for="Bold">Bold</label>
+  <input type="checkbox" onclick="checkbox(3)" id="Underline" name="Underline" value="Underline">
+  <label for="Underline">Underline</label>
+
+  <div>
+  <textarea type="text" rows="4" cols="50"></textarea>
+</div>
 </body>
 </html>
 
