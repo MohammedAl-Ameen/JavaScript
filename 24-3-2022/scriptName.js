@@ -40,7 +40,7 @@ Ex: firstName(persons) => ['John', 'Alex', 'Alice', 'Thor', 'Soso']
 function firstName(person){
     let array = [];
 
-    size = Object.keys(person).length;
+    
     console.log(size)
     for(i = 0; i < size; i++){
         array[i] = person[i].name.first}
@@ -61,7 +61,7 @@ Ex: averageAge(persons) => 41.2
 */
 function averageAge(person){
     sum = 0;
-    size = Object.keys(person).length;
+   
     for(let i = 0; i < size; i++){
         sum += person[i].age;
     }
