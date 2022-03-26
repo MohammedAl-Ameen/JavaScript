@@ -1,3 +1,5 @@
+document.getElementById("list").onchange = function(){ChangePicture()};
+
 function ChangePicture(){
   var x =  document.getElementById('list').value;
 
