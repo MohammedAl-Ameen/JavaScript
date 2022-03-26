@@ -12,3 +12,8 @@ function addSong() {
     document.getElementById("box").value = "";
 
 }
+
+
+function getfocus() {
+    document.getElementById("box").focus();
+  }
