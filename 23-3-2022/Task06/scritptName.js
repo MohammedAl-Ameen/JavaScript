@@ -1,19 +1,14 @@
 function addSong() { 
     let add = document.createElement("li");
-    let inputValue = document.getElementById('write').value;
-    var t = document.createTextNode(inputValue);
-    add.appendChild(t);
+    let inputValue = document.getElementById('box').value;
+    var text = document.createTextNode(inputValue);
+    add.appendChild(text);
     if (inputValue === '') {
         alert("You must write a song name!");
     } else {
-        document.getElementById("song").appendChild(add);
+        document.getElementById("list").appendChild(add);
     }
 
-    document.getElementById("write").value = "";
-
-}
-
-function bcolor() {
-    document.getElementById("write").className = document.getElementById("write")+"write";
+    document.getElementById("box").value = "";
 
 }
