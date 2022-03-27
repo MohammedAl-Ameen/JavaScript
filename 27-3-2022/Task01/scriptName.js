@@ -3,21 +3,21 @@
 choice = [];
 function myfunction(){
     x = document.getElementById("name1");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("age");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("gender");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("brief");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("major");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("birthday");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     x = document.getElementById("siblings");
-    sessionStorage.setItem(x.id, x.value);
+    localStorage.setItem(x.id, x.value);
     
-    sessionStorage.setItem("choice", JSON.stringify(choice));
+    localStorage.setItem("choice", JSON.stringify(choice));
     
     
     
@@ -29,14 +29,14 @@ document.getElementById("myFile").addEventListener("change" , function(){
     const reader = new FileReader();
 
     reader.addEventListener("load" , ()=>{
-        sessionStorage.setItem("image" , reader.result);
+       localStorage.setItem("image" , reader.result);
     });
 
     reader.readAsDataURL(this.files[0]);
 });
 
 
- img = sessionStorage.getItem("image");
+ img = localStorage.getItem("image");
 
  if(img){
      document.getElementById("myimg").setAttribute("src" , img)
@@ -54,27 +54,27 @@ function checkbox(num){
 }
 
 
-name1 = sessionStorage.getItem('name1');
+name1 = localStorage.getItem('name1');
 document.getElementById("info").innerHTML +=" " + name1;
 
-age = sessionStorage.getItem('age');
+age = localStorage.getItem('age');
 document.getElementById("info").innerHTML += " "  + age;
 
-gender = sessionStorage.getItem('gender');
+gender = localStorage.getItem('gender');
 document.getElementById("info").innerHTML += " " +gender;
 
-brief = sessionStorage.getItem('brief');
+brief = localStorage.getItem('brief');
 document.getElementById("info").innerHTML +=" " + brief;
 
-major = sessionStorage.getItem('major');
+major = localStorage.getItem('major');
 document.getElementById("info").innerHTML += " " +major;
 
-birthday = sessionStorage.getItem('birthday');
+birthday = localStorage.getItem('birthday');
 document.getElementById("info").innerHTML += " " +birthday;
 
-siblings = sessionStorage.getItem('siblings');
+siblings = localStorage.getItem('siblings');
 document.getElementById("info").innerHTML += " " +siblings;
 
-choice = sessionStorage.getItem('choice');
+choice = localStorage.getItem('choice');
 document.getElementById("info").innerHTML += " " +choice;
 
