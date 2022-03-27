@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task01</title>
+</head>
+<body>
+    <form id="myform" action="#">
+        <div class="labels">
+        <label for="name">Name:</label><br>
+        <label for="Age">Age</label><br>
+        <label for="gender">Gender:</label><br>
+        <label for="brief">Brief&nbsp;Description:</label><br>
+        <label for="major">Major</label><br>
+        <label for="birthday">Birthday:</label><br>
+        <label for="program">Languages&nbsp;you&nbsp;like:</label><br>
+        <label for="filename">Image for you:</label> <br>
+        <label for="siblings">siblings number with a brief description of them:</label>
+        
+    </div>
+    <div>
+        <input type="text" id="name1" name="name1"><br>
+        <input type="text" id="age" name="age"><br>
+        <select name="gender" id="gender">
+            <option></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        <input type="text" id="brief" name="brief"><br>
+        <input type="text" id="major" name="major"><br>
+        <input type="date" id="birthday" name="birthday"><br>
+        
+        <div id="checkbox">
+        <input type="checkbox" id="C#" name="C#" value="C#" onchange="checkbox(1)">
+        <label for="C#">C#</label>
+        <input type="checkbox" id="C++" name="C++" value="C++" onchange="checkbox(2)">
+        <label for="C++">C++</label>
+        <input type="checkbox" id="JS" name="JS" value="JS" onchange="checkbox(3)">
+        <label for="JS">JS</label>
+         </div>
+
+        <input type="file" id="myFile" name="filename">
+         <br>
+        <input type="richbox" name="siblings"id="siblings">
+         <div>
+            <input type="submit" value="submit" onclick="myfunction()">
+         </div>
+        
+    </div>
+
+      </form>
+
+
+<div class="cards">
+        <div id="class-img">
+        <img id="myimg"></div>
+        
+        <div id="info"></div>
+        <div></div>
+</div>
+</body>
+</html>
+
+<script src="scriptName.js"></script>

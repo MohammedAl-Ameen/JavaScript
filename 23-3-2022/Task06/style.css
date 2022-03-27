@@ -20,5 +20,5 @@ ul li {
 
   #box:focus {
     
-    outline-color: blue;
+    outline: rgba(20, 20, 238, 0.534) 2px solid;
 }
