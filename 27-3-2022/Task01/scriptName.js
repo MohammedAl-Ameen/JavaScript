@@ -26,6 +26,7 @@ function myfunction(){
 
 
 document.getElementById("myFile").addEventListener("change" , function(){
+    
     const reader = new FileReader();
 
     reader.addEventListener("load" , ()=>{

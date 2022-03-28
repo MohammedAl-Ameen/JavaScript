@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tilte</title>
+</head>
+<body>
+    <button id="btn">load Data</button>
+    <div id="info"><h2>My data is:</h2>
+    <table border="1px" id="tb">
+        <tr><th>name</th> <th>id</th> <th>age</th></tr>
+    </table>
+    </div>
+
+    <script>
+        document.getElementById('btn').addEventListener('click' , function(){
+            let x = new XMLHttpRequest();
+            x.open('GET', 'data.json');
+            x.send();
+            x.onload = function(){
+                let data = JSON.parse(x.responseText);
+                getdata(data);
+                
+            }
+
+           
+        });
+        function getdata(data){
+        var info = document.getElementById('tb');
+        var Data ='';
+        for(let index = 0; index < data.length;index++){
+            Data += '<tr>'  + '<td>' + data[index].name + '</td>' + '<td>' + data[index].id  + '</td>' + '<td>' + data[index].age + '</td>' + '</tr>';
+        }
+
+        info.insertAdjacentHTML('beforeend' , Data);
+    }
+    </script>
+</body>
+</html>

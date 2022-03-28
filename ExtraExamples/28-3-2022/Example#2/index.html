@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+
+<body>
+    <h3>Filling the form</h3>
+
+    <div>
+        <form>
+
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <br><br>
+            <label for="age">Age:</label>
+
+            <input type="number" id="age" name="lastname" placeholder="Your age..">
+            <br><br>
+            <div class="form-check">
+                <label id="male">
+                    <input type="radio" name="gender" id="male" value="mail" class="gender">
+                    Male
+                </label>
+                <label id="female">
+                    <input type="radio" name="gender" id="female" class="gender" value="female" checked>
+                    Female
+                </label>
+
+            </div>
+            <br>
+
+            <label for="lname"> Brief Description: </label><br>
+            <textarea name="text" id="brief" cols="30" rows="10"></textarea>
+            <br><br>
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" placeholder="Your major..">
+            <br><br>
+            <label for="uni">University:</label>
+            <input type="text" id="uni" name="uni" placeholder="Your University..">
+            <br><br>
+            <label>Programing Language</label><br>
+
+            <input type="checkbox" id="ch1">
+            <label for="ch1">Java
+            </label><br>
+
+            <input type="checkbox" id="ch2">
+            <label for="ch2">C#
+            </label><br>
+
+            <input type="checkbox" id="ch3">
+            <label for="ch3">Python
+            </label><br>
+
+            <input type="checkbox" id="ch4">
+            <label for="ch4">C++
+            </label>
+            <br><br>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <label for="sib">Number of your siblings: <input type="number" name="sib" id="sib"></label>
+            <label for="sibBr"> Brief Description: </label><br>
+            <textarea name="text" id="sibBr" cols="30" rows="10"></textarea>
+            <br><br>
+           
+            <input type="button" id="sub" onclick="storage()" value="Submit">
+        </form>
+        <div class="decoration">
+            <div class="crad" id="d1"></div>
+            <div class="crad" id="d2"></div>
+            <div class="crad" id="d3"></div>
+        </div>
+
+        <div id="class-img">
+        <img id="myimg"></div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="sctirptName.js"></script>
