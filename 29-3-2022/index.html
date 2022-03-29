@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <select class="form-control" id="names">
+            <option>Please Selcet</option>
+        </select>
+
+        <div id="show"></div>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+    async function LoadData(){
+        const response = await fetch('https://www.breakingbadapi.com/api/characters');
+        const data = await response.json();
+    
+        for(i = 0; i < data.length; i++){
+            document.getElementById('names').innerHTML += "<option>" + data[i].name + "</option>";
+        }
+
+       
+    }
+
+    
+
+    LoadData();
+   
+    document.getElementById('names').addEventListener('change' , function(){
+           
+            API_URL = "https://www.breakingbadapi.com/api/characters?name=" + document.getElementById('names').value.split(" ")[0];
+            get_nickname(API_URL);
+        })
+ 
+        async function get_nickname(API_URL){
+            const response = await fetch(API_URL);
+            const data = await response.json();
+            
+            document.getElementById('show').innerHTML = data[0].nickname;
+        }
+
+   
+    
+</script>
