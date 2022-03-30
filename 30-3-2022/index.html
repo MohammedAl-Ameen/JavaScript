@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div id="form">
+    <label for="fname">First Name:</label> <br> <input type="text" id="fname" name="fname"> <label id="label-fname"></label>  <br>
+    <label for="lname">Last Name:</label> <br> <input type="text" id="lname" name="lname">  <label id="label-lname"></label> <br>
+    <label for="birthday">Birthday:</label> <br> <input type="text" id="birthday" name="birthday"> <label id="label-birthday"></label> <br>
+    <label for="email">Email:</label> <br> <input type="text" id="email" name="email"> <label id="label-email"></label> <br>
+    <label for="cemail">Confirm Email:</label> <br> <input type="text" id="cemail" name="cemail"> <label id="label-cemail"></label> <br>
+    <label for="password">Password:</label> <br> <input type="password" id="password" name="password"> <label id="label-password"></label> <br>
+    <label for="cpassword">Confirm password:</label> <br> <input type="password" id="cpassword" name="cpassword"> <label id="label-cpassword"></label> <br>
+</div>
+    <style>
+        input{
+            margin: 2px;
+            
+        }
+    </style>
+
+    <script>
+
+        document.getElementById("fname").addEventListener('change' , function(){
+            fname = this.value;
+            check = /\d/ig;
+            result = check.test(fname);
+            if(result == true){
+                document.getElementById("label-fname").style.color = "red";
+                document.getElementById("label-fname").innerHTML = "Numbers are not allow";
+            }else{
+                document.getElementById("label-fname").innerHTML = "";
+            }
+        });
+
+
+        document.getElementById("lname").addEventListener('change' , function(){
+            lname = this.value;
+            check = /\d/ig;
+            result = check.test(lname);
+            if(result == true){
+                document.getElementById("label-lname").style.color = "red";
+                document.getElementById("label-lname").innerHTML = "Numbers are not allow";
+            }else{
+                document.getElementById("label-lname").innerHTML = "";
+            }
+        });
+
+
+        document.getElementById("birthday").addEventListener('change' , function(){
+            birthday = this.value;
+            check =  /^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4}$/i;
+
+            result = check.test(birthday);
+           
+            if(result == false){
+                document.getElementById("label-birthday").style.color = "red";
+                document.getElementById("label-birthday").innerHTML = "The format should be dd/mm/yyyy";
+            }else{
+                document.getElementById("label-birthday").innerHTML = "";
+            }
+            if(birthday == "")
+                document.getElementById("label-birthday").innerHTML = "";
+            
+        });
+        
+
+        document.getElementById("email").addEventListener('change' , function(){
+            email = this.value;
+            check =  /^[a-zA-Z]+[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
+
+            result = check.test(email);
+           
+            if(result == false){
+                document.getElementById("label-email").style.color = "red";
+                document.getElementById("label-email").innerHTML = "The e-mail is not valid";
+            }else{
+                document.getElementById("label-email").innerHTML = "";
+            }
+            if(email == "")
+                document.getElementById("label-email").innerHTML = "";
+            
+        });
+
+
+        document.getElementById("cemail").addEventListener('change' , function(){
+            result = document.getElementById("email").value == this.value;
+            
+            if(result){
+                document.getElementById("label-cemail").innerHTML = "";
+            }else{
+                document.getElementById("label-cemail").style.color = "red";
+                document.getElementById("label-cemail").innerHTML = "The e-mail is dosn't match";
+            }
+
+            if(document.getElementById("cemail").value == "")
+                document.getElementById("label-cemail").innerHTML = "";
+        });
+
+
+        document.getElementById("password").addEventListener('change' , function(){
+            password = this.value;
+            check =  /\b^([A-Z])/;
+            if(check.test(password)){
+                check = /[0-9].*[0-9]/;
+                if(check.test(password)){
+                    check = /[?=.*[\]\\{}!@#$%^&*]/;
+                    if(check.test(password)){
+                        console.log(password);
+                        document.getElementById("label-password").innerHTML = "";
+                    }else{
+                        document.getElementById("label-password").style.color = "red";
+                document.getElementById("label-password").innerHTML = "the password must have at least one symbol";
+                    }
+                }else{
+                    document.getElementById("label-password").style.color = "red";
+                document.getElementById("label-password").innerHTML = "the password must have at least two numbers";
+                }
+            }else{
+                document.getElementById("label-password").style.color = "red";
+                document.getElementById("label-password").innerHTML = "the first letter must be uppercase";
+            }
+            
+            if(password == ""){
+
+                document.getElementById("label-password").innerHTML = ""; 
+            }
+            
+        });
+
+
+        document.getElementById("cpassword").addEventListener('change' , function(){
+            result = document.getElementById("password").value == this.value;
+            if(result){
+                document.getElementById("label-cpassword").innerHTML = "";
+            }else{
+                document.getElementById("label-cpassword").style.color = "red";
+                document.getElementById("label-cpassword").innerHTML = "The password donsn't match";
+            }
+
+            if(document.getElementById("cpassword").value == "")
+                document.getElementById("label-cpassword").innerHTML = "";
+        });
+
+
+    </script>
+</body>
+</html>

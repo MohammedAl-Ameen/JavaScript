@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>API</title>
+</head>
+<body>
+    <div class="container">
+        <select class="form-control" id="names">
+            <option>Please Selcet</option>
+        </select>
+
+        <div id="show"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+<script>
+    
+    async function LoadData(){
+        let response;
+
+        data = await JSON.stringify('characters.txt');
+    
+        for(i = 0; i < data.length; i++){
+            document.getElementById('names').innerHTML += "<option>" + data[i].name + "</option>";
+        }
+        
+       
+    }
+
+    
+
+    LoadData();
+   
+    document.getElementById('names').addEventListener('change' , function(){
+           
+    document.getElementById('show').innerHTML = localStorage.getItem(document.getElementById('names').value)
+        
+
+        })
+
+
+
+        m = [{"char_id":1,
+        "name":"Walter White",
+        "birthday":"09-07-1958",
+        "occupation":["High School Chemistry Teacher","Meth King Pin"],
+        "img":"https://images.amcnetworks.com/amc.com/wp-content/uploads/2015/04/cast_bb_700x1000_walter-white-lg.jpg",
+        "status":"Presumed dead",
+        "nickname":"Heisenberg",
+        "appearance":[1,2,3,4,5],
+        "portrayed":"Bryan Cranston",
+        "category":"Breaking Bad",
+        "better_call_saul_appearance":[]},
+    
+    
+        {"char_id":2,
+        "name":"Jesse Pinkman",
+        "birthday":"09-24-1984",
+        "occupation":["Meth Dealer"],
+        "img":"https://vignette.wikia.nocookie.net/breakingbad/images/9/95/JesseS5.jpg/revision/latest?cb=20120620012441",
+        "status":"Alive",
+        "nickname":"Cap n' Cook",
+        "appearance":[1,2,3,4,5],
+        "portrayed":"Aaron Paul",
+        "category":"Breaking Bad",
+        "better_call_saul_appearance":[]}
+
+       
+    ]
+
+    console.log(m[0].name);
+
+ 
+       
+            
+
+   
+    
+</script>
