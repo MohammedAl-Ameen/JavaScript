@@ -7,13 +7,21 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --main-color: #18dcff;
+    --sub-color: #7158e2;
+    --background-color: rgb(24, 23, 38); 
+
+}
+
 body{
     font-family: 'Source Code Pro', monospace;
-    background-color:  rgb(237, 237, 237);
-    color: aliceblue;
     font-size: 1.1rem;
     transition: all .4s ease-in-out;
     overflow: hidden;
+    background: var(--background-color) !important;
+    color: white;
 }
 
 
@@ -83,12 +91,12 @@ section{
 
 
 .sec1{
-    background-color: red;
+    background-color: var(--background-color);
     transform: translateY(0) scale(1);
 }
 
 
-.sec2{
+/* .sec2{
     background-color: blue;
     transform: translateY(0) scale(1);
 }
@@ -101,7 +109,7 @@ section{
 .sec4{
     background-color: black;
     transform: translateY(0) scale(1);
-}
+} */
 
 .active{
     
@@ -120,4 +128,133 @@ section{
     
 }
 
+.header-content{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    height: 100%;
+}
 
+
+
+
+
+.header-content .left-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.header-content .left-header .background-shadow{
+    width: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    height: 100vh;
+    clip-path: polygon(0 0, 34% 0, 50% 100%, 0% 100%);
+    z-index: -1;
+    transition: all .4s ease-in-out;
+    right: 0;
+    top: 0;
+
+}
+
+.header-content .left-header .background-img{
+    width: 50%;
+    background-color: black;
+    height: 90vh;
+    border-radius: 10px;
+    margin-left: 4rem;
+    position: relative;
+    overflow: hidden;
+    
+
+}
+
+.background-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s ease-in-out;
+    filter: grayscale(100%);
+}
+
+
+.background-img :hover{
+    filter: grayscale(0);
+}
+
+.right-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15rem;
+}
+
+/* .right-header > h1{
+    font-size: 3rem;
+} */
+
+.right-header h1 span{
+    color: var(--main-color);
+}
+
+
+.right-header p{
+    margin: 1rem 0;
+}
+
+
+.right-header h1{
+    margin: 1rem 0;
+}
+
+
+.right-header .main-btn{
+text-decoration: none;
+border-radius: 30px;
+color: white;
+font-weight: bold;
+position: relative;
+border: solid 4px var(--main-color);
+display: flex;
+align-self: flex-start;
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+
+.right-header .main-btn .btn-text{
+    padding: 0 2rem;
+    z-index: 3;
+}
+
+
+
+.right-header .main-btn .btn-icon{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 1.5rem;
+    z-index: 3;
+}
+
+.btn-color {
+    height: 100%;
+    width: 30%;
+    position: absolute;
+    background: var(--main-color);
+    right: 0;
+    top: 0;
+    padding-right: 20%;
+    transform: translateX(0%);
+    z-index: 2;
+    transition: all 0.4s ease-in;
+}
+
+.btn-color:hover{
+    background-color: var(--main-color);
+    padding-right: 100%;
+     transition: all 0.4s ease-in;
+}

@@ -14,7 +14,7 @@ function changeClass(){
    allsections.addEventListener('click' , function(e){
        const id = e.target.dataset.id;
        const element = document.getElementById(id);
-       if(id){  document.querySelector('.active').remove('active');
+       if(id){  document.querySelector('.active').classList.remove('active');
        element.classList.add('active');
     }
    })
@@ -22,4 +22,3 @@ function changeClass(){
 
 
 changeClass();
-
