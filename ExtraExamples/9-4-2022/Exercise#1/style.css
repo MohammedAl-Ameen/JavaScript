@@ -258,3 +258,14 @@ overflow: hidden;
     padding-right: 100%;
      transition: all 0.4s ease-in;
 }
+
+.main-btn{
+    background-image: linear-gradient(to left , #18dcff 50% ,  transparent 50%);
+    background-size: 200%;
+    background-position: 0%;
+    transition: all 0.5s ;
+}
+
+.main-btn:hover{
+    background-position: 100%;
+}
