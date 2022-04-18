@@ -3,6 +3,7 @@ const sectBtn = document.querySelectorAll(".control");
 const allsections = document.querySelector('.main-content');
 
 function changeClass(){
+
    for(let i = 0; i < sectBtn.length ; i++){
        sectBtn[i].addEventListener('click' , function(){
            activeBtn = document.getElementsByClassName('active-btn');
@@ -17,6 +18,12 @@ function changeClass(){
        if(id){  document.querySelector('.active').classList.remove('active');
        element.classList.add('active');
     }
+   })
+
+   const themeBtn = document.querySelector('.theme-btn');
+   themeBtn.addEventListener('click' , ()=>{
+       let element = document.body;
+       element.classList.toggle('light-mode');
    })
 }
 
