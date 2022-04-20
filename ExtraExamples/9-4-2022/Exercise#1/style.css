@@ -286,7 +286,7 @@ overflow: hidden;
 
 .main-title{
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 
@@ -568,26 +568,26 @@ div.main-title h2 span.big-txt{
 
 }
 
-.portfolios{
+.skills{
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
 }
 
-.portfolio-item{
+.skill-item{
     position: relative;
     border-radius: 15px;
 }
 
-.portfolio-item img{
+.skill-item img{
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.portfolios .hover-item{
+.skills .hover-item{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -606,20 +606,20 @@ div.main-title h2 span.big-txt{
 }
 
 
-.portfolios .hover-item h3{
+.skills .hover-item h3{
     font-size: 1.5rem;
     color: var(--white-color);
     margin-bottom: 1.5rem;
 }
 
-.portfolios .hover-item .icons{
+.skills .hover-item .icons{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.portfolios .hover-item .icons a{
+.skills .hover-item .icons a{
     background-color: var(--background-color);
     color: var(--white-color);
     border-radius: 50%;
@@ -635,31 +635,31 @@ div.main-title h2 span.big-txt{
 }
 
 
-.portfolios .hover-item .icons a i{
+.skills .hover-item .icons a i{
     font-size: 1.5rem;
     margin: 0 1rem;
 }
 
-.portfolios .hover-item .icons a:hover{
+.skills .hover-item .icons a:hover{
     background-color: var(--white-color);
     color: var(--background-color);
 }
 
 
-.portfolio-item:hover .hover-item{
+.skill-item:hover .hover-item{
      opacity: 1;
      transform: scale(1);
 }
 
 
-.blogs{
+.recommendations{
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.blogs .blog{
+.recommendations .recommendation{
     position: relative;
     background-color: var(--grey-color);
     border-radius: 5px;
@@ -668,19 +668,19 @@ div.main-title h2 span.big-txt{
     margin-bottom: 1rem;
 }
 
-.blogs .blog:hover{
+.recommendations .recommendation:hover{
     box-shadow: 1px 1px 20px rgb(0, 0, 0 , .3);
     transform: translateY(-5px);
     transition: all .4s ease-in-out;
 }
 
-.blogs .blog:hover img{
+.recommendations .recommendation:hover img{
     filter: grayscale(0);
     transform: scale(1.1);
     box-shadow: 1px 4px 20px rgb(0, 0, 0 , .8);
 }
 
-.blogs .blog img{
+.recommendations .recommendation img{
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -690,24 +690,24 @@ div.main-title h2 span.big-txt{
     transition: all .4s ease-in-out;
 }
 
-.blogs .blog-text{
+.recommendations .recommendation-text{
     margin-top: -7px;
     padding: 1.1rem;
     border-top: 8px solid var(--main-color);
 }
 
-.blogs .blog-text h4{
+.recommendations .recommendation-text h4{
     font-size: 1.5rem;
     margin-bottom: .7rem;
     transition: all .4s ease-in-out;
     cursor: pointer;
 }
 
-.blogs .blog-text h4:hover{
+.recommendations .recommendation-text h4:hover{
     color: var(--main-color);
 }
 
-.blogs .blog-text p{
+.recommendations .recommendation-text p{
     color: var(--grey-color1);
     line-height: 2rem;
     padding-bottom: 1rem;
@@ -716,13 +716,17 @@ div.main-title h2 span.big-txt{
 
 .contact-content-con{
     display: flex;
-    padding-top: 3.5rem;
+    padding-top: 2.5rem;
 }
 
 .contact-content-con .left-contact{
     flex: 2;
 
 }
+
+/* .contact-info {
+    width: 71%;
+} */
 
 .contact-content-con .right-contact{
     margin-left: 3rem;
@@ -743,13 +747,14 @@ div.main-title h2 span.big-txt{
     outline: none;
     border: none;
     background-color: var(--grey-color);
-    width: 100%;
+    width: 90%;
     color: var(--white-color);
     resize: none;
 }
 
 .i-c-2{
     display: flex;
+    width: 93%;
 
 }
 
@@ -769,12 +774,10 @@ div.main-title h2 span.big-txt{
     line-height: 2rem;
 }
 
-.contact-info{}
-
 .contact-info .contact-item{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .contact-info .contact-item p{
@@ -855,4 +858,70 @@ font-size: 1.3rem;
     pointer-events: none;
 }
 
+.soft-skills{
+    background-color: #88d3ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/4;
+    height: 15rem;
+}
 
+.soft-skills p{
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.skills h1{
+    text-align: center;
+    grid-column: 2;
+}
+
+.hover-item ul{
+    width: 90%;
+    list-style-type: none;
+    /* border: red 1px solid; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.hover-item li{
+    position: relative;
+    margin: 0.5%;
+    background-color: var(--background-color);
+    /* border-radius: 20px; */
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    transition: color ease-in-out 0.4s;
+}
+
+
+.hover-item li:hover{
+    color: var(--background-color);
+}
+
+.hover-item li::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--sub-color);
+    width: 0%;
+    height: 100%;
+    transition: all ease-in-out 0.4s ;
+    z-index: -1;
+}
+
+.hover-item li:hover::before{
+ width: 100%;
+}
