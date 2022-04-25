@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#wrapper{
+    position: relative;
+    width: 100%;
+    min-height: 55vw;
+    overflow: hidden;
+    
+}
+
+
+.layer{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+
+.skewed .handle{
+    top: 50%;
+    position: absolute;
+    height: 200%;
+    width: 5px;
+    background-color: #fdab00;
+    left: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    transform-origin: top;
+    z-index: 3;
+}
+
+.content-wrap{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    transform: skew(30deg);
+    margin-left: 1000px;
+    
+}
+
+.top{
+    margin-left: -1000px;
+    transform: skew(-30deg);
+    width: calc(50vw + 1000px);
+    background-color: rgba(0, 0, 0, 0.259);
+}
+
+
+
+.circle{
+    position: absolute;
+    width:35%;
+    height: 35%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    z-index: 2;
+    background-color: blue;
+}
