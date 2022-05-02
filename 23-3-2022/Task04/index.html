@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <select id="font" onchange="font()">
+        <option value="arial">Arial</option>
+        <option value="calibri">Calibri</option>
+        <option value="corbel">Corbel</option>
+    </select>
+
+    <select id="size" onchange="font_size()">
+        <option value="10px">10px</option>
+        <option value="12px">12px</option>
+        <option value="30px">30px</option>
+    </select>
+
+
+  <input type="checkbox" onclick="checkbox(1)" id="Italic" name="Italic" value="Italic">
+  <label for="Italic">Italic</label>
+  <input type="checkbox" onclick="checkbox(2)" id="Bold" name="Bold" value="Bold">
+  <label for="Bold">Bold</label>
+  <input type="checkbox" onclick="checkbox(3)" id="Underline" name="Underline" value="Underline">
+  <label for="Underline">Underline</label>
+
+  <div>
+  <textarea type="text" rows="4" cols="50"></textarea>
+</div>
+</body>
+</html>
+
+<script src="scriptName.js"></script>

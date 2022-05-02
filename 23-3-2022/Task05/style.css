@@ -1,0 +1,12 @@
+#flexit{
+    display: flex;
+}
+
+#warning1 , #warning2{
+    color: red;
+
+}
+
+#btn{
+    display: none;
+}
